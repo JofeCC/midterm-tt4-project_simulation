@@ -30,7 +30,7 @@ RUN npm install
 COPY --from=builder ./app/dist /var/www/html
 
 #
-COPY ./default.conf /etc/nginx/sites-available/default
+COPY ./default.conf /etc/nginx/conf.d/default.conf
 
 RUN echo "API_PORT=3000" >> /app/.env
 
